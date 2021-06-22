@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Album ID: {{ id }}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-card class="blue-box" *ngFor="let photo of photos" (click)="onClick(photo.id, photo.albumId)">
+      <ion-card-content>
+        <div class="wrapper">
+          <div><img src="{{photo.thumbnailUrl}}"></div>
+          <div></div>
+          <div class="title">{{ photo.title }}</div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

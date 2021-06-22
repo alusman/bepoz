@@ -22,4 +22,9 @@ export class UserService {
         return this.http.get<Photo[]>(`${this.photosUrl}/?albumId=${id}`)
         .pipe(map(data => { return data}));
     }
+
+    public GetPhoto(id: number, albumId: number): Observable<Photo> {
+        return this.http.get<Photo>(`${this.photosUrl}/?albumId=${albumId}&id=${id}`)
+        .pipe(map(data => { return data[0]}));
+    }
 }

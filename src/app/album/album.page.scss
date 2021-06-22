@@ -1,0 +1,11 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 6fr 1fr 6fr;
+}
+
+.title {
+    display: flex;
+    vertical-align: middle;
+    align-items:center;
+    justify-content:center;
+}

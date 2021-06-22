@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Album ID: {{ albumId }}<br>
+        Photo ID: {{ id }}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true" *ngIf="photo">
+    <div class="image-box"><img [src]="photo.url"></div>
+    <div class="blue-box">{{ photo.title }}</div>
+  </ion-content>

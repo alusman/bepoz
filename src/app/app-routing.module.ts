@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AlbumPage } from './album/album.page';
+import { HomePage } from './home/home.page';
+import { PhotoPage } from './photo/photo.page';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    component: HomePage,
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'album/:id',
+    component: AlbumPage,
+  },
+  {
+    path: 'photo/:id/:albumId',
+    component: PhotoPage,
+  }
 ];
 
 @NgModule({
